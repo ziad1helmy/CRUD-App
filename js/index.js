@@ -147,7 +147,7 @@ function isinvalid(product,alert){
 
 
 productName.onkeyup=function(){
-    var regexName=/(^[A-Z][A-Za-z\s0-90-9]{3,100})$/ ;
+var regexName = /^[A-Z][A-Za-z0-9\s]{3,100}$/;
     if(regexName.test(productName.value)){
         isvalid(productName,alertName);
     }
@@ -158,7 +158,7 @@ productName.onkeyup=function(){
 
 
 productPrice.onkeyup=function(){
-    var regexPrice=/(^[1-90-9]{3,60})$/;
+var regexPrice = /^\d{1,10}(\.\d{1,2})?$/;
     if(regexPrice.test(productPrice.value)){
         isvalid(productPrice,alertPrice);
     }else{
@@ -169,7 +169,7 @@ productPrice.onkeyup=function(){
 
 
 productcategory.onkeyup=function(){
-    var regexCategory=/[A-Za-z0-90-9]{5,50}/;
+var regexCategory = /^[A-Za-z0-9\s\-_]{5,50}$/;
     if(regexCategory.test(productcategory.value)){
         isvalid(productcategory,alertcategory);
     }else{
@@ -181,7 +181,7 @@ productcategory.onkeyup=function(){
 
 
 productDesc.onkeyup=function(){
-    var regexDesc=/[A-Za-z0-9]{10,}/;
+    var regexDesc = /^(?=.*[A-Za-z]).{10,}$/;
     if(regexDesc.test(productDesc.value)){
         isvalid(productDesc,alertDesc);
     }else{
