@@ -181,7 +181,7 @@ productcategory.onkeyup=function(){
 
 
 productDesc.onkeyup=function(){
-    var regexDesc=/[A-Za-z0-9]{15,}/;
+    var regexDesc=/[A-Za-z0-9]{10,}/;
     if(regexDesc.test(productDesc.value)){
         isvalid(productDesc,alertDesc);
     }else{
