@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="container bg-dark text-light mt-3 w-75 rounded-3" style="height: auto;">
+    <h1 class="text-center mt-1">CRUD APP</h1>
+    <div class="container bg-dark text-light mt-3 w-75 rounded-3" style="max-height: 100vh;">
         <div class="mb-3">
             <label  class="form-label mt-2">product Name:</label>
             <input type="text" class="form-control" id="productname" placeholder="e.g., Laptop" required>
@@ -34,11 +34,12 @@
             <div class="alert alert-danger p-2 my-2 d-none"id="alertDesc">Description should be at least 15 characters long.</div>
 
         </div>
-        <div  class="button d-flex justify-content-end"><button class="btn btn-success mb-3 w-25" id="btn1" disabled>Add product</button></div>
+        <div  class="button d-flex justify-content-end"><button class="btn btn-success mb-3 w-25 p-2" id="btn1" disabled>Add product</button></div>
         
         <input class="form-control" id="searchinput" type="search" placeholder="Enter your Search">
-      <div class="display-table py-3">
-        <table class="table table-striped table-hover text-center mt-3 p-2">
+
+      <div class="table-responsive mt-5"style="width: 100%;overflow:auto;max-height:300px">
+        <table class="table table-striped table-hover text-center align-middle p-2 mb-3"style="width: 100%;min-width: 600px;border-collapse: collapse;">
         <thead>
             <th>Product Name</th>
             <th>Product Price</th>
